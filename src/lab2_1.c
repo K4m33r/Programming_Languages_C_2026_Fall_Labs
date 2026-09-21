@@ -12,17 +12,25 @@
 */
 
 int sum_to_n(int n) {
-    // TODO: implement sum with a for loop
-    return 0; // placeholder
+  int sum = 0;
+  for (int i = 1; i <= n; i++) {
+    sum = sum + i;
+  }
+
+  return sum;
 }
 
 int main(void) {
-    int n;
+  int n;
 
-    printf("Enter a positive integer n: ");
-    scanf("%d", &n);
+  printf("Enter a positive integer n: ");
+  scanf("%d", &n);
 
-    // TODO: validate input, call function, and print result
-
-    return 0;
+  if (n < 1) {
+    printf("error: n must be positive.\n");
+  } else {
+    int result = sum_to_n(n);
+    printf("Sum = %d\n", result);
+  }
+  return 0;
 }
