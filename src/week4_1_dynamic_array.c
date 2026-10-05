@@ -1,7 +1,7 @@
 /*
  * week4_1_dynamic_array.c
- * Author: [Your Name]
- * Student ID: [Your ID]
+ * Author: [Kamer]
+ * Student ID: [241ADB155]
  * Description:
  *   Demonstrates creation and usage of a dynamic array using malloc.
  *   Allocate memory for n integers, read them from the user,
@@ -15,34 +15,49 @@
 #include <stdlib.h>
 
 int main(void) {
-    int n;
-    int *arr = NULL;
+  int n;
+  int* arr = NULL;
 
-    printf("Enter number of elements: ");
-    if (scanf("%d", &n) != 1 || n <= 0) {
-        printf("Invalid size.\n");
-        return 1;
+  printf("Enter number of elements: ");
+  if (scanf("%d", &n) != 1 || n <= 0) {
+    printf("Invalid size.\n");
+    return 1;
+  }
+
+  // TODO: Allocate memory for n integers using malloc
+  arr = malloc(n * sizeof(int));
+  // Example: arr = malloc(n * sizeof(int));
+
+  // TODO: Check allocation success
+  if (arr == NULL) {
+    printf("Memory allocation failed.\n");
+    return 1;
+  }
+  // If arr is NULL: print "Memory allocation failed." and return 1
+
+  // TODO: Print the prompt "Enter %d integers: " (with n), then read
+  printf("Enter %d integers: ", n);
+
+  for (int sayac = 0; sayac < n; sayac++) {
+    if (scanf("%d", &arr[sayac]) != 1) {
+      printf("Invalid input.\n");
+      free(arr);
+      return 1;
     }
+  }
 
-    // TODO: Allocate memory for n integers using malloc
-    // Example: arr = malloc(n * sizeof(int));
+  // TODO: Compute the sum and the average (use floating point for the average)
+  int toplam = 0;
+  for (int sayac = 0; sayac < n; sayac++) {
+    toplam += arr[sayac];
+  }
+  // TODO: Print the results exactly as:
+  double ortalama = (double)toplam / n;
 
-    // TODO: Check allocation success
-    // If arr is NULL: print "Memory allocation failed." and return 1
-
-    // TODO: Print the prompt "Enter %d integers: " (with n), then read
-    //       n integers into the array.
-    //       If a value cannot be read: print "Invalid input.",
-    //       free the array and return 1
-
-    // TODO: Compute the sum and the average (use floating point for the average)
-
-    // TODO: Print the results exactly as:
-    //       Sum = <sum>
-    //       Average = <average with 2 decimals, %.2f>
-
-    // TODO: Free allocated memory
-    (void)arr;  // remove this line once you use arr
-
-    return 0;
+  printf("Sum %d\n", toplam);
+  printf("Average = %.2f\n", ortalama);
+  // TODO: Free allocated memory
+  // remove this line once you use arr
+  free(arr);
+  return 0;
 }
