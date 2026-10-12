@@ -28,7 +28,7 @@ int main(void) {
   ogrenci1.id = 1001;
   ogrenci1.grade = 9.1f;
 
-  strcpy(ogrenci2.name, "Bob smith");
+  strcpy(ogrenci2.name, "Bob Smith");
   ogrenci2.id = 1002;
   ogrenci2.grade = 8.7f;
 
