@@ -54,7 +54,7 @@ int main(void) {
   // TODO: Print the results exactly as:
   double ortalama = (double)toplam / n;
 
-  printf("Sum %d\n", toplam);
+  printf("Sum = %d\n", toplam);
   printf("Average = %.2f\n", ortalama);
   // TODO: Free allocated memory
   // remove this line once you use arr

@@ -24,7 +24,7 @@ int main(void) {
   struct Student ogrenci1;
   struct Student ogrenci2;
 
-  strcpy(ogrenci1.name, "Alimalik");
+  strcpy(ogrenci1.name, "Alice Johnson");
   ogrenci1.id = 1001;
   ogrenci1.grade = 9.1f;
 
@@ -32,9 +32,9 @@ int main(void) {
   ogrenci2.id = 1002;
   ogrenci2.grade = 8.7f;
 
-  printf("Student 1 : %s, ID: %d, Grade: %.1f\n", ogrenci1.name, ogrenci1.id,
+  printf("Student 1: %s, ID: %d, Grade: %.1f\n", ogrenci1.name, ogrenci1.id,
          ogrenci1.grade);
-  printf("Student 2 : %s, ID: %d, Grade: %.1f\n", ogrenci2.name, ogrenci2.id,
+  printf("Student 2: %s, ID: %d, Grade: %.1f\n", ogrenci2.name, ogrenci2.id,
          ogrenci2.grade);
 
   return 0;
